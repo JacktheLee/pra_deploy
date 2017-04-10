@@ -1,0 +1,16 @@
+<h1>Chat rooms</h1>
+
+<p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
+
+<ul>
+  <%= render @chat_rooms %>
+</ul>
+
+<%= link_to "로그아웃", destroy_user_session_path , method: 'delete' %>
+
+<p>하하</p>
+<%= current_user.remember_me! %>
+<%= current_user.remember_created_at %>
+<%= current_user.rememberable_value%>
+<%= current_user.rememberable_options%>
+<p>하하</p>
